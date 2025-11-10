@@ -185,7 +185,6 @@ CREATE TABLE Patient_Payment (
     payment_id INT UNIQUE NOT NULL,
     patient_id INT NOT NULL,
     encounter_id INT NULL,
-    billing_charge_id INT NOT NULL,
     FOREIGN KEY (payment_id) REFERENCES Payment(payment_id),
     FOREIGN KEY (patient_id) REFERENCES Patient(patient_id),
     FOREIGN KEY (encounter_id) REFERENCES Encounter(encounter_id)
