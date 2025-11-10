@@ -321,7 +321,6 @@ patient_payment_id	INT	PK, AUTO_INCREMENT	Unique identifier
 payment_id	INT	FK, UNIQUE, NOT NULL	References Payment(payment_id)
 patient_id	INT	FK, NOT NULL	References Patient(patient_id)
 encounter_id	INT	FK, NULL	References Encounter(encounter_id)
-billing_charge_id	INT	FK, NOT NULL	References Billing_Charge(charge_id) - Which charge this pays
 Business Rule: payment_id must reference a Payment record where payment_type = 'PATIENT'
 Relationships:
 •	Payment (1) → Patient_Payment (1): Inherits from Payment supertype
