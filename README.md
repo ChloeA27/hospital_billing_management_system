@@ -77,13 +77,15 @@ Developed as a comprehensive database course project demonstrating:
 - [ ] Develop API layer for application integration
 
 ## 📫 Contact
-Feel free to reach out for collaboration or questions about the implementation!
+Feel free to reach out for questions about the implementation!
+
+## LinkedIn
+
 ```
-
-## LinkedIn Post
-
 https://www.linkedin.com/in/qianchloe/
 ```
+
+
 🚀 Excited to share my Hospital Database Management System project! 
 
 I've designed and implemented a comprehensive database solution that manages the entire healthcare workflow - from patient encounters through insurance claims to payment processing.
