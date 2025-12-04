@@ -34,7 +34,7 @@ A comprehensive database solution for hospital operations, managing the complete
 
 ## 🛠️ Technologies Used
 - **Database**: SQL Server
-- **Design Tools**: ERD modeling tools
+- **Design Tools**: draw.io for ERD modeling
 - **SQL Features**: IDENTITY columns, BIT data types, CTEs, Views, Triggers
 - **Documentation**: Comprehensive logical ERD with full attribute specifications
 
