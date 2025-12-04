@@ -42,23 +42,34 @@ A comprehensive database solution for hospital operations, managing the complete
 ```
 /hospital-management-system
 │
-├── /ERD
-│   └── logical_ERD.png          # Complete entity relationship diagram
+├── README.md                      # Project documentation
 │
-├── /DDL
-│   └── create_tables.sql        # Database schema creation scripts
+├── /Design Documents
+│   ├── statement_and_objectives.pdf  # Mission statement and project objectives
+│   ├── conceptual_DB_design.pdf      # Conceptual database design document
+│   └── logical_DB_design.pdf         # Comprehensive logical design documentation
 │
-├── /DML
-│   └── sample_data.sql          # Sample data insertion scripts
+├── /ERD Diagrams
+│   ├── conceptual_ERD.png           # Conceptual entity relationship diagram
+│   ├── logical_ERD.png              # Initial logical ERD
+│   └── logical_ERD_updated.png      # Final logical ERD with revisions
 │
-├── /Views
-│   └── patient_billing_view.sql # Database views
-│
-├── /Triggers
-│   └── payment_triggers.sql     # Automated payment processing
-│
-└── /Documentation
-    └── logical_design.pdf       # Complete design documentation
+├── /Database Scripts
+│   ├── /DDL
+│   │   ├── create_tables.sql        # Database schema creation
+│   │   └── DBM_DDL_proj.sql         # Complete DDL implementation
+│   │
+│   ├── /DML
+│   │   ├── insert_script.sql        # Sample data insertion
+│   │   └── DBM_DML_proj.sql         # Complete DML with test data
+│   │
+│   ├── /Optimization
+│   │   ├── indexes_script.sql       # Performance optimization indexes
+│   │   └── encryption_script.sql    # Data security implementation
+│   │
+│   └── /Testing
+│       ├── psm_script.sql           # Stored procedures and functions
+│       └── test_psm.sql             # Test cases for procedures
 ```
 
 ## 🎓 Academic Context
