@@ -82,7 +82,7 @@ Feel free to reach out for collaboration or questions about the implementation!
 
 ## LinkedIn Post
 
-Here's a professional LinkedIn post to attract HR attention: https://www.linkedin.com/in/qianchloe/
+https://www.linkedin.com/in/qianchloe/
 ```
 🚀 Excited to share my Hospital Database Management System project! 
 
