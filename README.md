@@ -50,19 +50,17 @@ A comprehensive database solution for hospital operations, managing the complete
 │   └── logical_DB_design.pdf         # Comprehensive logical design documentation
 │
 ├── /ERD Diagrams
-│   ├── conceptual_ERD.png           # Conceptual entity relationship diagram
-│   ├── logical_ERD.png              # Initial logical ERD
-│   └── logical_ERD_updated.png      # Final logical ERD with revisions
+│   ├── conceptual_ERD.png           # Conceptual ERD
+│   └── logical_ERD_updated.png      # Logical ERD
 │
 ├── /Database Scripts
 │   ├── /DDL
-│   │   ├── create_tables.sql        # Database schema creation
-│   │   └── DBM_DDL_proj.sql         # Complete DDL implementation
+│   │   └── create_tables.sql        # Database schema creation
 │   │
 │   ├── /DML
 │   │   ├── insert_script.sql        # Sample data insertion
-│   │   └── DBM_DML_proj.sql         # Complete DML with test data
-│   │
+│   │   └── validation_proj.sql      # Data validation checks
+│   │ 
 │   ├── /Optimization
 │   │   ├── indexes_script.sql       # Performance optimization indexes
 │   │   └── encryption_script.sql    # Data security implementation
