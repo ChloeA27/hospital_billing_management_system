@@ -44,16 +44,16 @@ A comprehensive database solution for hospital operations, managing the complete
 │
 ├── README.md                      # Project documentation
 │
-├── /Design Documents
+├── /design_documents
 │   ├── statement_and_objectives.pdf  # Mission statement and project objectives
 │   ├── conceptual_DB_design.pdf      # Conceptual database design document
 │   └── logical_DB_design.pdf         # Comprehensive logical design documentation
 │
-├── /ERD Diagrams
+├── /ERD diagrams
 │   ├── conceptual_ERD.png           # Conceptual ERD
 │   └── logical_ERD_updated.png      # Logical ERD
 │
-├── /Database Scripts
+├── /database_scripts
 │   ├── /DDL
 │   │   └── create_tables.sql        # Database schema creation
 │   │
@@ -61,11 +61,11 @@ A comprehensive database solution for hospital operations, managing the complete
 │   │   ├── insert_script.sql        # Sample data insertion
 │   │   └── validation_proj.sql      # Data validation checks
 │   │ 
-│   ├── /Optimization
+│   ├── /optimization
 │   │   ├── indexes_script.sql       # Performance optimization indexes
 │   │   └── encryption_script.sql    # Data security implementation
 │   │
-│   └── /Testing
+│   └── /testing
 │       ├── psm_script.sql           # Stored procedures and functions
 │       └── test_psm.sql             # Test cases for procedures
 ```
