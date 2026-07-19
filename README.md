@@ -23,8 +23,9 @@ A comprehensive database solution for hospital operations, managing the complete
 - **16 Core Tables**: Patient, Insurance_Company, Insurance_Policy, Encounter, Provider, Clinical_Order, Billing_Charge, Claim, Payment (with subtypes)
 - **Junction Tables**: Encounter_Provider, Claim_Charge for many-to-many relationships
 - **Reference Tables**: Dictionary for standardized medical codes and pricing
-- **Database Views**: VW_PatientBillingSummary for reporting
-- **Triggers**: TR_SettleBillingChargeOnClaimPayment_CTE for automated payment processing
+- **Database Views**: `VW_PatientBillingSummary`, `VW_ProviderWorkload`, `VW_ActiveInsurancePolicies` for reporting
+- **Triggers**: `TR_SettleBillingChargeOnClaimPayment_CTE` for automated payment processing
+- **Stored Procedures & Functions**: `SP_ProcessNewOrderItem`, `SP_UpdateClaimStatus`, `SP_RecordPatientPayment`, `FN_CalculateItemCost`, `FN_GetPolicyCoverageRate`, `FN_GetTotalEncounterCharge`
 
 ## 📊 Design Decisions
 - Separated Insurance_Company from Insurance_Policy to eliminate redundancy
@@ -38,9 +39,50 @@ A comprehensive database solution for hospital operations, managing the complete
 - **SQL Features**: IDENTITY columns, BIT data types, CTEs, Views, Triggers
 - **Documentation**: Comprehensive logical ERD with full attribute specifications
 
+## 🚀 Getting Started
+
+### Prerequisites
+- SQL Server (2019+ recommended) or Azure SQL Database
+- A SQL client (SSMS, Azure Data Studio, or `sqlcmd`)
+
+### Setup
+
+```bash
+git clone https://github.com/ChloeA27/hospital_billing_management_system.git
+cd hospital_billing_management_system
+```
+
+1. **Create the schema** — `database_scripts/DDL/create_tables.sql` drops and
+   recreates a `HealthDB` database with all 16 tables, constraints, and
+   relationships:
+   ```bash
+   sqlcmd -S <server> -i database_scripts/DDL/create_tables.sql
+   ```
+2. **Load sample data** — 10 rows per table:
+   ```bash
+   sqlcmd -S <server> -d HealthDB -i database_scripts/DML/insert_script.sql
+   ```
+3. **Create views, triggers, stored procedures & functions**:
+   ```bash
+   sqlcmd -S <server> -d HealthDB -i database_scripts/testing/psm_script.sql
+   ```
+4. **Validate** — row counts and data quality checks:
+   ```bash
+   sqlcmd -S <server> -d HealthDB -i database_scripts/DML/validation_proj.sql
+   ```
+5. **(Optional) Apply performance/security scripts**:
+   ```bash
+   sqlcmd -S <server> -d HealthDB -i database_scripts/optimization/indexes_script.sql
+   sqlcmd -S <server> -d HealthDB -i database_scripts/optimization/encryption_script.sql
+   ```
+6. **(Optional) Run the stored-procedure test suite**:
+   ```bash
+   sqlcmd -S <server> -d HealthDB -i database_scripts/testing/test_psm.sql
+   ```
+
 ## 📁 Repository Structure
 ```
-/hospital-management-system
+/hospital_billing_management_system
 │
 ├── README.md                      # Project documentation
 │
@@ -82,39 +124,8 @@ Developed as a comprehensive database course project demonstrating:
 - [ ] Implement audit logging for HIPAA compliance
 - [ ] Develop API layer for application integration
 
-## 📫 Contact
-Feel free to reach out for questions about the implementation!
+## 👤 Author
 
-## LinkedIn
-
-```
-https://www.linkedin.com/in/qianchloe/
-```
-
-
-🚀 Excited to share my Hospital Database Management System project! 
-
-I've designed and implemented a comprehensive database solution that manages the entire healthcare workflow - from patient encounters through insurance claims to payment processing.
-
-🔧 Technical Highlights:
-- Achieved 3NF normalization while strategically denormalizing for performance
-- Implemented sophisticated payment architecture using disjoint specialization patterns
-- Designed 16+ interconnected tables managing patient care, billing, and insurance workflows
-- Created automated triggers and views for financial reconciliation
-- Enforced complex business rules through database constraints
-
-💡 Key Design Decisions:
-- Separated Insurance_Company from Policy entities to eliminate redundancy
-- Built Payment supertype with Patient_Payment and Claim_Payment subtypes
-- Optimized query performance through strategic foreign key placement
-- Handled N:M relationships through properly designed junction tables
-
-📊 Business Impact:
-This system can track multiple insurance policies per patient, handle partial payments, support claim resubmissions, and maintain complete audit trails - all while ensuring data integrity.
-
-The project demonstrates my ability to translate complex business requirements into efficient database architectures, balance normalization with performance needs, and implement enterprise-level database solutions.
-
-
-#DatabaseDesign #SQL #DataModeling #HealthcareIT #SoftwareEngineering #DatabaseDevelopment #SQLServer #SystemDesign #TechInnovation #OpenToWork
-
-Would love to connect with teams working on data-intensive applications!
+**Qi An**
+- GitHub: [@ChloeA27](https://github.com/ChloeA27)
+- LinkedIn: [Qi An](https://www.linkedin.com/in/qianchloe/)
